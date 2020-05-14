@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Tezos TZIP-12 Token Box =================",
   "dependencies": {
-    "@taquito/taquito": "^6.0.3-beta.0",
+    "@taquito/taquito": "^6.1.1-beta.0",
     "promise-retry": "^1.1.1"
   },
   "devDependencies": {},
