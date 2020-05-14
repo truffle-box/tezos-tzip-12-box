@@ -32,18 +32,11 @@ contract('tzip_12_tutorial', accounts => {
     });
 
     it(`should not store any balance for Bob`, async () => {
-        let fetchBalanceError;
-
-        try {
-            /**
-             * If a big map key does not exist in the storage, the RPC returns a 404 HttpResponseError
-             */
-            await storage.get(bob.pkh);
-        } catch (e) {
-            fetchBalanceError = e;
-        }
-
-        assert(bigMapKeyNotFound(fetchBalanceError))
+         /**
+         * If a big map key does not exist in the storage, the RPC (as of carthage) returns undefined
+         */
+        const deployedBalanceBob = await storage.get(bob.pkh);
+        assert.equal(deployedBalanceBob, undefined);
     });
 
     it('should transfer 1 token from Alice to Bob', async () => {
