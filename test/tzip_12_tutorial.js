@@ -1,7 +1,6 @@
 const tzip_12_tutorial = artifacts.require('tzip_12_tutorial');
 
 const { initial_storage } = require('../migrations/1_deploy_tzip_12_tutorial.js');
-const bigMapKeyNotFound = require('./../helpers/bigMapKeyNotFound.js');
 const constants = require('./../helpers/constants.js');
 /**
  * For testing on carthagenet (testnet), instead of the sandbox network,
